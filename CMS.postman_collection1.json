@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "9cdc86d3-1a3e-4046-ae19-429dd2dcfa53",
+		"name": "CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mahesh\",\r\n    \"userid\": \"mahes123\",\r\n    \"email\": \"rajesh@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"dataOfBirth\": \"1994-01-19\",\r\n    \"address\": {\r\n        \"lineNumber1\": \"123 E 2nd st\",\r\n        \"lineNumber2\": \"123 E 2nd st\",\r\n        \"city\": \"Chennai\",\r\n        \"state\": \"Tamil Nadu\",\r\n        \"country\": \"India\",\r\n        \"pincode\": \"600100\"\r\n    },\r\n    \"plan\": {\r\n        \"planname\": \"Paid Plan\",\r\n        \"planamount\": \"80000\",\r\n        \"plan_start_date\": \"2020-04-01\",\r\n        \"plan_end_date\": \"2020-03-31\"\r\n    },\r\n    \"contact\": \"9750057900\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7002/cms/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7002",
+					"path": [
+						"cms",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUBMIT CLAIM",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\": \"mahes123\",\r\n    \"password\": \"password\",\r\n    \"memberid\": 2,\r\n    \"claim\": {\r\n        \"planid\": 2,\r\n        \"date\": \"2020-08-01\",\r\n        \"amount\": 50000,\r\n        \"prescriber_name\": \"Dr. Agarwal\",\r\n        \"therapy_type\": \"XOLA\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7003/cms/submitClaim",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7003",
+					"path": [
+						"cms",
+						"submitClaim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PLAIN DETAILS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\": \"mahes123\",\r\n    \"password\": \"password\",\r\n    \"memberid\": 2,\r\n    \"plan\": {\r\n        \"planid\": 2,\r\n        \"planname\": \"Paid Plan\",\r\n        \"planamount\": \"120000\",\r\n        \"plan_start_date\": \"2020-04-01\",\r\n        \"plan_end_date\": \"2020-03-31\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7004/cms/updatePlan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7004",
+					"path": [
+						"cms",
+						"updatePlan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenicate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mahes123\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7002/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7002",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
