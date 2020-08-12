@@ -1,0 +1,23 @@
+https://memberregistration-mahesh.cfapps.io
+https://submitclaim-mahesh.cfapps.io
+https://updateplandetails-mahesh.cfapps.io
+
+{{authToken}}
+
+https://cms-api-gateway-mahesh.cfapps.io/api/member/authenticate
+https://cms-api-gateway-mahesh.cfapps.io/api/member/cms/register
+https://cms-api-gateway-mahesh.cfapps.io/api/claim/cms/submitClaim
+https://cms-api-gateway-mahesh.cfapps.io/api/plan/cms/updatePlan
+
+
+https://memberregistration-mahesh.cfapps.io/authenticate
+https://memberregistration-mahesh.cfapps.io/cms/register
+https://submitclaim-mahesh.cfapps.io/cms/submitClaim
+https://updateplandetails-mahesh.cfapps.io/cms/updatePlan
+
+
+
+
+Eureka Service Registry
+API Gateway
+Config server
